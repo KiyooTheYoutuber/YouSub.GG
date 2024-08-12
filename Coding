@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouSub.GG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .subscribe-btn, .create-btn {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .subscribe-btn:hover, .create-btn:hover {
+            background-color: #cc0000;
+        }
+        .locked-content {
+            display: none;
+            margin-top: 20px;
+        }
+        .create-link {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to YouSub.GG</h1>
+        <p>Subscribe to unlock the download link!</p>
+        <button class="subscribe-btn" onclick="subscribe()">Subscribe to YouTube Channel</button>
+        
+        <div class="locked-content" id="lockedContent">
+            <p>Your download link is ready:</p>
+            <a href="https://your-download-link.com">Download Here</a>
+        </div>
+
+        <div class="create-link">
+            <p>Want to lock your own link? Click below to get started!</p>
+            <button class="create-btn">Create Your Locked Link</button>
+        </div>
+    </div>
+
+    <script>
+        function subscribe() {
+            alert('Thank you for subscribing!');
+            document.getElementById('lockedContent').style.display = 'block';
+        }
+    </script>
+    
+</body>
+</html>
